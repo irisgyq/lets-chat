@@ -36,6 +36,12 @@ AccountManager.prototype.update = function(id, options, cb) {
         if (options.displayName) {
             user.displayName = options.displayName;
         }
+        if (options.sex) {
+            user.sex = options.sex;
+        }
+        if (options.telephone) {
+            user.telephone = options.telephone;
+        }
         if (options.email) {
             user.email = options.email;
         }
