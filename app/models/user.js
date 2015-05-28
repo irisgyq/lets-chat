@@ -29,12 +29,6 @@ var UserSchema = new mongoose.Schema({
             return (v.length <= 24);
         }, 'invalid ldap/kerberos username']
     },
-    gender: {
-        type: String,
-        required: false,
-        trim:true,
-        lowercase: true,
-    },
     email: {
         type: String,
         required: true,
@@ -42,14 +36,6 @@ var UserSchema = new mongoose.Schema({
         lowercase: true,
         unique: true,
         validate: [ validate.email, 'invalid email address' ]
-    },
-    telephone: {
-         type: Number,
-         required: false,
-         trim: true,
-         validate:[ function(v) {
-            return (v.length <= 11);
-            }, 'invalid telephone number']
     },
     password: {
         type: String,
