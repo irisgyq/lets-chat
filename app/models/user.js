@@ -29,12 +29,11 @@ var UserSchema = new mongoose.Schema({
             return (v.length <= 24);
         }, 'invalid ldap/kerberos username']
     },
-    sex: {
+    gender: {
         type: String,
-        required: true,
+        required: false,
         trim:true,
         lowercase: true,
-        unique: true
     },
     email: {
         type: String,
